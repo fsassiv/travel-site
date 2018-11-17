@@ -5,12 +5,13 @@ var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
 var cssimport = require('postcss-import');
 var mixins = require('postcss-mixins');
+var hexrgba = require('postcss-hexrgba');
 
 gulp.task('styles', function() {
     console.log('CSS files has been changed...');
     return gulp.src('./app/assets/styles/styles.css')
         // .pipe(postCSS([autoprefixer]))
-        .pipe(postCSS([cssimport, mixins, cssvars, nested]))
+        .pipe(postCSS([cssimport, mixins, cssvars, nested, hexrgba]))
         .on('error', function(errorInfo) {
             console.log(errorInfo.toString());
             this.emit('end');

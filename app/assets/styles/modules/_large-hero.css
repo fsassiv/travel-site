@@ -20,6 +20,7 @@
         }
     }
     &__description {
+        padding-top: 60px;
         color: white;
         font-size: 1.1rem;
         font-weight: 100;
@@ -31,12 +32,16 @@
         }
     }
     &__text-content {
+        padding-top: 88px;
         position: absolute;
         top: 50%;
         width: 100%;
         text-align: center;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
+        @mixin atMedium {
+            padding-top: 60px;
+        }
     }
     &__image {
         display: block;
