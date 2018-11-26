@@ -1085,6 +1085,11 @@ a {
 
   .site-header {
     background-color: rgba(47,85,114, .3);
+    position: fixed;
+  }
+
+  .site-header--dark {
+    background-color: rgba(47,85,114, .95);
   }
 }
 
@@ -1110,6 +1115,8 @@ a {
   z-index: 1;
   background-color: #2f5572;
   padding: 25px 36px;
+  -webkit-transition: all .3 ease-out;
+  transition: all .3 ease-out;
 }
 
 @media only screen and (min-width: 800px) {
@@ -1118,6 +1125,11 @@ a {
     left: auto;
     -webkit-transform: translateX(0) scale(1);
     transform: translateX(0) scale(1);
+  }
+
+  .site-header--dark .site-header__logo {
+    -webkit-transform: translateX(0) scale(.57);
+    transform: translateX(0) scale(.57);
   }
 }
 
@@ -1274,4 +1286,18 @@ a {
     padding: 12px 0;
     background-color: transparent;
   }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
+  }
+}
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s ease-out;
+}
+
+.reveal-item--is-visible {
+  opacity: 1;
 }

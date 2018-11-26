@@ -16,4 +16,8 @@
 @import "modules/_site-footer";
 @import "modules/_site-header";
 @import "modules/_primary-nav";
+<<<<<<< HEAD
 @import "modules/_modal";
+=======
+@import "modules/_reveal-item";
+>>>>>>> 82fac73adbd4c320fbed3b97162f897ea4bf6a8b
